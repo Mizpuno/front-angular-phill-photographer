@@ -1,0 +1,107 @@
+<div id="header" class="w-full h-165 bg-home pt-20">
+    <div class="h-full grid content-center place-content-center">
+        <div class="flex flex-col gap-3">
+            <h1 class="text-6xl font-medium text-center">MY NAME IS BILL</h1>
+            <p class="w-xl text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                when an unknown printer took a galley of type and scrambled it to make a type 
+                specimen book. It has survived not only five centuries, but also the leap into 
+                electronic typesetting, remaining essentially unchanged.</p>
+            <div class="flex justify-center mt-5">
+                <button class="border border-amber-50. shrink--0 p-2">Learn More</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="showcase" class="grid gap-5 pt-5 pb-15">
+    <div class="flex content-center gap-3 place-content-center">
+        <button class="border border-amber-50 bg-transparent hover:bg-amber-50 hover:text-primary p-2">button-1</button>
+        <button class="border border-amber-50 bg-transparent hover:bg-amber-50 hover:text-primary p-2">button-2</button>
+        <button class="border border-amber-50 bg-transparent hover:bg-amber-50 hover:text-primary p-2">button-3</button>
+    </div>
+    <div class="lg:grid-cols-3 md:grid-cols-2 
+                grid grid-cols-1 gap-5 h-360 2xl:px-50 xl:px-20 px-15">
+        @for (card of [1, 2, 3]; track card) {
+            <div class="flex flex-col gap-5 overflow-y-auto snap-y snap-mandatory"
+                 [ngClass]="{
+                    'my-10 hidden lg:flex': card === 2,
+                    ' sm:hiddenç md:flex': card === 3
+                }"> 
+                 @for (cimg of [1, 2, 3, 4, 5]; track $index) {
+                    <div class="snap-center shrink-0 bg-amber-50 h-120">1</div>
+                 }
+            </div>
+        }
+    </div>
+</div>
+
+<div id="services-preview" 
+     class="lg:px-50 md:px-30
+            bg-secondary grid py-20 px-15">
+    <div class="font-medium">MY SERVICE</div>
+    <div class="flex justify-between">
+        <h2 class="text-6xl font-normal">I have an expirence to photo you</h2>
+        <button class="bg-amber-50 text-black px-15 py-3 h-fit">All Service -></button>
+    </div>
+    <div class="xl:grid-cols-3 lg:grid-cols-2 
+                grid grid-cols-1 gap-0 mt-15 content-center">
+        @for (service of [1, 2, 3]; track $index) {
+            <div class="xl:col-span-1 
+                        col-span-1 border border-zinc-500 p-10 grid"
+                 [ngClass]="{'lg:col-span-2': $index === 2}">
+                <div class="font-medium text-3xl mb-2">Service Title</div>
+                <div class="text-justify mb-8">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                        when an unknown printer took a galley of type and scrambled it to make a type 
+                        specimen book.</div>
+                <div class="font-normal text-xl">Read more -></div>   
+            </div>
+        }
+    </div>
+</div>
+
+<div id="customer-review" 
+     class="xl:px-70 lg:px-50 md:px-30
+            py-20 px-15">
+    <div class="relative">
+        <div class="2xl:grid-cols-5
+                    lg:grid-cols-4  
+                    grid-cols-1 grid gap-5">
+            <div class="col-span-2 flex justify-center">
+                <div class="bg-amber-50 h-120 w-full rounded-md">s</div>
+            </div>
+            <div class="2xl:col-span-3 2xl:h-55 
+                        lg:content-center lg:place-content-center
+                        col-span-2 grid h-full ">
+                <div class="lg:max-w-130">
+                    <h2 class="font-medium">2 TIMES PHOTO CUSTOMER</h2>
+                    <h2 class="lg:text-6xl text-4xl font-normal">Rate this person be the best photo.</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="2xl:absolute 2xl:bottom-8 2xl:max-h-50 
+                    right-0 h-fit w-full mt-5">
+            <div class="flex flex-row 2xl:gap-100 gap-5 snap-x snap-mandatory overflow-x-auto">
+                <div id="_blank" class="w-100 2xl:block hidden"></div>
+
+                @for (review of [1, 2, 3, 4, 5]; track $index) {
+                    <div class="2xl:min-w-180 2xl:max-w-180 2xl:min-h-50 
+                                p-10 h-fit w-full bg-secondary rounded-md snap-end shrink-0">
+                        <h2 class="font-medium text-xl mb-2">MR. SAMPLE PERSON</h2>
+                        <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                            when an unknown printer took a galley of type and scrambled it to make a type 
+                            specimen book.</p>
+                    </div>
+                }
+            </div>
+        </div>
+
+
+        
+    </div>
+</div>
+
+

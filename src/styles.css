@@ -1,3 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "tailwindcss";
+
+:root {
+    --color-primary-100: #272829;
+    --color-primary-200: #171718;
+    --color-primary-300: #121213;
+    --color-secondary-100: #61677A;
+    --color-secondary-200: #535869;
+    --color-secondary-300: #404451;
+    --color-light: #61677A;
+    --color-bright: #FFF6E0;
+}
+
+@theme {
+    --color-primary: var(--color-primary-200);
+    --color-secondary: var(--color-primary-100);
+    --color-light: var(--color-light);
+    --color-bright: var(--color-bright);
+}
+
+/* @layer components {
+    div {
+        border: 1px solid red;
+    }
+} */
+
+
+body {
+    background-color: var(--color-primary-200);
+    font-family: "Kanit", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--color-bright)
+}
